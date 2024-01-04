@@ -3,8 +3,18 @@ import urlJoin from "url-join";
 
 export default (url: string = location.href) => {
   try {
-    const { hash, origin, pathname, search: _search } = new URL(url);
-    const [hashPath, ...hashQuery] = hash.split("?");
+    const {
+      hash: _hash,
+      search: _search,
+      origin,
+      pathname,
+      host,
+      hostname,
+      port,
+      protocol,
+    } = new URL(url);
+
+    const [hash, ...hashQuery] = _hash.split("?");
 
     let _query = {
       ...queryString.parse(_search),
@@ -16,18 +26,24 @@ export default (url: string = location.href) => {
       };
     });
 
-    const query = new URLSearchParams(Object.entries(_query) as []);
-    const search = query.size ? `?${query.toString()}` : ``;
+    const searchParams = new URLSearchParams(Object.entries(_query) as []);
+    const search = searchParams.size ? `?${searchParams.toString()}` : ``;
+    const href = urlJoin(origin, pathname, hash, search);
 
     return {
+      host,
+      hostname,
+      port,
+      protocol,
       origin,
       pathname,
       hash,
-      query,
+      searchParams,
       search,
-      url: urlJoin(origin, pathname, hashPath, search),
+      href,
     };
   } catch (err) {
-    throw new Error(`<url-format>: url is invalid`);
+    console.error(err);
+    return {};
   }
 };
