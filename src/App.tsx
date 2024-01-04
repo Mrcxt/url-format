@@ -1,5 +1,5 @@
 /*
- * @LastEditTime: 2024-01-04 17:57:32
+ * @LastEditTime: 2024-01-04 19:17:46
  * @Description:
  * @Date: 2023-08-31 14:58:00
  * @Author: @周星星同学
@@ -22,6 +22,10 @@ export default () => {
 
   const urlInfo = useMemo(() => urlFormat(url), [url]);
 
+  useEffect(() => {
+    console.log(urlInfo);
+  }, [urlInfo]);
+
   return (
     <div className="px-10">
       <Space direction="vertical" className="w-full">
@@ -41,15 +45,7 @@ export default () => {
           onChange={(e) => setUrl(e.target.value)}
           options={OPTIONS}
         />
-        <Descriptions
-          size="middle"
-          column={1}
-          bordered
-          items={Object.entries(urlInfo).map(([key, value]) => ({
-            label: key,
-            children: <Text copyable>{value.toString()}</Text>,
-          }))}
-        />
+        <Text>打开控制台查看解析结果</Text>
       </Space>
     </div>
   );
