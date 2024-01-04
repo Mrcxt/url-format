@@ -1,5 +1,5 @@
 {
-  "name": "@anys/template",
+  "name": "@anys/url-format",
   "version": "0.0.0",
   "description": "",
   "type": "module",
@@ -11,10 +11,10 @@
   ],
   "license": "MIT",
   "author": "周星星同学",
-  "homepage": "https://github.com/Mrcxt/template",
+  "homepage": "https://github.com/Mrcxt/url-format",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Mrcxt/template"
+    "url": "https://github.com/Mrcxt/url-format"
   },
   "files": [
     "dist"
@@ -54,13 +54,18 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^8.0.3",
+    "less": "^4.2.0",
     "lint-staged": "^13.1.2",
+    "normalize.css": "^8.0.1",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "release-it": "^15.6.0",
     "stylelint": "^14.9.1",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.0.2",
+    "unocss": "^0.58.3",
     "vite": "^4.4.5"
   },
   "lint-staged": {
