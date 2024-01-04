@@ -1,5 +1,12 @@
 
 
+## [1.0.2](https://github.com/Mrcxt/url-format/compare/v1.0.1...v1.0.2) (2024-01-04)
+
+
+### Bug Fixes
+
+* 🐛 bug fix ([379d0b2](https://github.com/Mrcxt/url-format/commit/379d0b2a991c38076b7b3a132cab97bc76a8fdab))
+
 ## [1.0.1](https://github.com/Mrcxt/url-format/compare/v1.0.0...v1.0.1) (2024-01-04)
 
 
