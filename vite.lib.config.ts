@@ -13,7 +13,7 @@ const pkg = require("./package.json");
 export default defineConfig({
   plugins: [react()],
   build: {
-    minify: false,
+    // minify: false,
     lib: {
       entry: resolve(fileURLToPath(new URL("./lib/index", import.meta.url))),
       formats: ["es"],
